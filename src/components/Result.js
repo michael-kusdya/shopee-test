@@ -11,7 +11,7 @@ class Result extends Component {
     render(){
         return this.props.displayedCurrencies.map((res, index) => {
             return (
-                <Card style={{marginTop: '20px'}} key={index}>
+                <Card style={{marginTop: '20px'}} key={index} className="item">
                     <CardContent>
                         <Grid container spacing={3}>
                             <Grid item sm={10}>
@@ -31,7 +31,8 @@ class Result extends Component {
                         </Grid>
                         <Grid item sm={2}>
                             <CardActions disableSpacing>
-                                <IconButton>
+                                <p style={{color: 'red'}}>Delete</p>          
+                                <IconButton style={{color: 'red'}}>
                                     <DeleteIcon onClick={(e) => { 
                                         e.stopPropagation();
                                         this.props.deleteCard(res, index) 

@@ -23,11 +23,11 @@ class AddMoreCurrency extends Component {
 
         if (this.props.showAddMoreInput) {
             return (
-                <Paper className={classes.root}>
+                <Paper className={classes.root} >
                     <TextField
                         select
                         label="Select New Currency"
-                        className={classes.textField}
+                        className={`moreCurrencyDropdown ${classes.textField}`}
                         value={this.props.newCurrency}
                         placeholder="Add More Currency"
                         onChange={this.props.onSelectNewCurrency}
@@ -44,7 +44,7 @@ class AddMoreCurrency extends Component {
             );
         }
         return (
-            <Paper className={classes.root} onClick={this.props.toggleMoreCurrencyInput}>
+            <Paper className={`toggleCurrencyDropdown ${classes.root}`} style={{cursor: 'pointer'}} onClick={this.props.toggleMoreCurrencyInput}>
                 <AddIcon style={{display: 'inline'}}/>
                 <h3 style={{display: 'inline'}}>Add More currency</h3>
             </Paper>
