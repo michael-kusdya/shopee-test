@@ -8,9 +8,9 @@ describe('<Input />', () => {
     console.log('test');
   }
 
-    it('renders an input to change amount of base currency', () => {
-        const input = mount(<Input onValueChange={onValueChange}/>)
-          
-        expect(input.find('input')).toBeDefined();
-      });
+  it('renders an input to change amount of base currency', () => {
+    const input = mount(<Input onValueChange={onValueChange}/>)
+      
+    expect(input.find('input')).toBeDefined();
+  });
 })

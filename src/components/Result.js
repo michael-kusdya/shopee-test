@@ -35,7 +35,7 @@ class Result extends Component {
                                 <IconButton style={{color: 'red'}}>
                                     <DeleteIcon onClick={(e) => { 
                                         e.stopPropagation();
-                                        this.props.deleteCard(res, index) 
+                                        this.props.deleteCurrency(res, index) 
                                       }} 
                                     />
                                 </IconButton>

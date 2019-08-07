@@ -52,7 +52,7 @@ class App extends Component {
     
   }
 
-  deleteCard = (card, index) => {
+  deleteCurrency = (card, index) => {
     let displayed = [...this.state.displayedCurrencies]
     displayed.splice(index, 1);
     this.setState({displayedCurrencies: displayed})
@@ -73,7 +73,7 @@ class App extends Component {
     this.setState({showAddMoreInput: true})
   }
 
-  addMoreCurrency = (e) => { 
+  addMoreCurrency = () => { 
 
     let newCurrency = this.state.newCurrency  
 
@@ -110,7 +110,7 @@ class App extends Component {
         <Result 
           displayedCurrencies={this.state.displayedCurrencies} 
           value={this.state.value} 
-          deleteCard={this.deleteCard} 
+          deleteCurrency={this.deleteCurrency} 
         />
 
         <Card style={{marginTop: '20px'}}>
