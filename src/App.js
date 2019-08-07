@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   fetchResult = async (currency) => {
-    const response = await axios.get('https://api.exchangeratesapi.io/latest?base=' + currency)
+    const response = await axios.get('//api.exchangeratesapi.io/latest?base=' + currency)
 
     this.setState({ result: response.data.rates });
 
